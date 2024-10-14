@@ -1,6 +1,7 @@
 package com.example.serenity;
 
 import net.serenitybdd.annotations.DefaultUrl;
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
@@ -59,6 +60,12 @@ public class SauceDemoTest extends PageObject {
         loginButton.click();
     }
 
+    public void addItemToCart(int index) {
+        List<WebElementFacade> items = findAll(".inventory_item");
+        if (index < items.size()) {
+            items.get(index).findElement(By.cssSelector(".btn_inventory")).click();
+        }
+    }
 
     public void addTwoItemsToCart() {
         if (addToCartButtons.size() >= 2) {
