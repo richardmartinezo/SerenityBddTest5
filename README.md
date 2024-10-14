@@ -13,5 +13,4 @@ Requirements:
   2.- Open console
   3.- Run mvn clean verify, it will run tests with screenplay and cucumber
 
-  Instructions to run tests Karate:
-  1.- Right-click and run PetStoreAPITestRunner.java on Intellij, it will run KarateFramework and API testing.
+  
