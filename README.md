@@ -9,8 +9,13 @@ Requirements:
 
   Instructions to run tests Serenity:
 
-  1.- Right-click and run LoginTest.Java on Intellij, it will run without cucumber
-  2.- Open console
-  3.- Run mvn clean verify, it will run tests with screenplay and cucumber
+- 1.- Right-click and run LoginTest.Java on Intellij, it will run without cucumber
+- 2.- Open console
+- 3.- Run mvn clean verify, it will run tests with screenplay and cucumber
 
   
+  Instructions to run reports
+- 1.- Open the console
+- 2.- Type the command mvn clean verify
+- 3.- Go to target/custom-reports/serenity-reports
+- 4.- Open the desired report on chrome

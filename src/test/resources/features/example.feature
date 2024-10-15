@@ -7,3 +7,8 @@ Feature: User Login and Purchase
     And the user proceeds to checkout
     And the user fills in the checkout form with valid details
     Then the user should complete the purchase successfully
+
+    Examples:
+      | username        | password     |
+      | standard_user   | secret_sauce |
+      | performance_glitch_user | secret_sauce |

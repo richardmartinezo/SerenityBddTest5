@@ -30,9 +30,9 @@ public class LoginStepsTasks extends ScenarioSteps {
         // No longer needed, as it's now in the login task
     }
 
-    @When("the user enters valid credentials")
-    public void theUserEntersValidCredentials() {
-        loginTask.execute("standard_user", "secret_sauce");
+    @When("the user enters credentials {string} and {string}")
+    public void theUserEntersCredentials(String username, String password) {
+        loginTask.execute(username, password);
     }
 
     @When("the user adds two items to the cart")
