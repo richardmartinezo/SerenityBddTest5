@@ -16,6 +16,12 @@ Feature: User Login and Purchase with Outlines
       | performance_glitch_user        | secret_sauce |
 
      # Conclusion section
-  Scenario: Document conclusions
+  Scenario Outline: Document conclusions for different scenarios
     Given the purchase scenarios have been executed
-    Then the conclusions should be documented
+    Then the conclusion for <scenarioType> should be <conclusion>
+
+    Examples:
+      | scenarioType      | conclusion                          |
+      | successful login  | "Purchase completed successfully"    |
+      | failed login      | "Purchase failed due to login issues"|
+      | out of stock      | "Purchase failed, item unavailable"  |

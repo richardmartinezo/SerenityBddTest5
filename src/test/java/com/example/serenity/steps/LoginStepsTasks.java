@@ -1,6 +1,7 @@
 package com.example.serenity.steps;
 
 
+import com.example.serenity.ConclusionWriter;
 import com.example.serenity.SauceDemoTest;
 import com.example.serenity.tasks.LoginTask;
 import com.example.serenity.tasks.AddItemToCartTask;
@@ -64,6 +65,14 @@ public class LoginStepsTasks extends ScenarioSteps {
     @Then("the conclusions should be documented")
     public void theConclusionsShouldBeDocumented() {
         System.out.println("Conclusion: The purchase functionality works as expected for all valid users.");
+    }
+
+    @Then("the conclusion for {string} should be {string}")
+    public void theConclusionForScenarioShouldBe(String scenarioType, String conclusion) {
+        String conc ="Scenario Type: " + scenarioType + " Conclusion: " + conclusion;
+        System.out.println("Scenario Type: " + scenarioType);
+        System.out.println("Conclusion: " + conclusion);
+        ConclusionWriter.writeConclusion("Conclusion: The user successfully completed the purchase scenario. " + conc);
     }
 
 
