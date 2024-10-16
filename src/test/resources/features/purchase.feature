@@ -14,3 +14,8 @@ Feature: User Login and Purchase with Outlines
       | username                       | password     |
       | standard_user                  | secret_sauce |
       | performance_glitch_user        | secret_sauce |
+
+     # Conclusion section
+  Scenario: Document conclusions
+    Given the purchase scenarios have been executed
+    Then the conclusions should be documented
