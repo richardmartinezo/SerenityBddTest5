@@ -22,3 +22,6 @@ Instructions to run tests Serenity:
 - 2.- Type the command mvn clean verify
 - 3.- Go to target/custom-reports/serenity-reports
 - 4.- Open the desired report on chrome
+
+Summary location:
+Summary location is on ..\SerenityBddTest5\target\site\serenity\summary.txt

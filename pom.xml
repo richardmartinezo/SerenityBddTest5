@@ -147,8 +147,32 @@
               </goals>
             </execution>
 
+
+
           </executions>
         </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.0.0</version> <!-- use the latest version -->
+          <executions>
+            <execution>
+              <id>copy-summary</id>
+              <phase>verify</phase> <!-- execute after verify phase -->
+              <goals>
+                <goal>exec</goal>
+              </goals>
+              <configuration>
+                <executable>cmd</executable>
+                <arguments>
+                  <argument>/c</argument>
+                  <argument>copy_summary.bat</argument>
+                </arguments>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
       </plugins>
   </build>
 

@@ -1,0 +1,3 @@
+@echo off
+echo Copying summary.txt to the root directory...
+copy target\site\serenity\summary.txt .\summary.txt
